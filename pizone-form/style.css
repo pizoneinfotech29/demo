@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #6c6a6a;
+  Overflow-x:scroll;
+}
+ #add-btn{
+  margin-bottom: 220px;
+ }
+
+
+/* .main{
+  margin-bottom: 250px;
+} */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 188px;
+}
+.required::after {
+content: ' *';
+color: red;
+}
+
+/* userTable{
+margin: bottom 80%;
+} */
+
+th, td {
+  border: 1px solid #fefafa;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+input, select {
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  /* margin-bottom: 450px; */
+  background:   rgb(19, 255, 19);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: rgb(192, 189, 194);
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+
+.close-btn {
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+body {
+  scrollbar-width: thin;
+}
+
+/* Color of the scrollbar thumb and track */
+body {
+  scrollbar-color: #8c8c8c #f1f1f1;
+}
+
+
+@media screen and (max-width: 600px) {
+  body {
+    display: block; /* Change to block layout for smaller screens */
+  }
+
+  table {
+    width: 100%; /* Make the table full width on smaller screens */
+  }
+
+  .popup-content {
+    width: 80%; /* Adjust the width of the popup content for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: block; /* Change to block layout for smaller screens */
+  }
+
+  table {
+    width: 100%; /* Make the table full width on smaller screens */
+  }
+
+  .popup-content {
+    width: 80%; /* Adjust the width of the popup content for smaller screens */
+  }
+}

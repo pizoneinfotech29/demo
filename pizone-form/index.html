@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizone_Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="J.js"></script>
+</head>
+<body>
+  <div class="main">
+<table id="userTable">
+  <thead>
+    <tr>
+      <th class="required" maxlength="30" required>First_name</th>
+      <th>Middle_Name</th>
+      <th class="required" required>Last_name</th>
+      <th class="required" required>Gender</th>
+      <th class="required" maxlength="10" required>Mobile_no</th>
+      <th class="required" required>Email</th>
+      <th>Category</th>
+      <th>Subcategory</th>
+      <th>Action-1</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <!--------------yeha pe dynamic data jyaiga------------->
+  </tbody>
+</table>
+</div>
+
+<button onclick="showPopup()" >Add</button>
+
+<div id="userPopup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="hidePopup()">&times;</span>
+    <form onsubmit="saveData()"></form>
+    <form onsubmit="addUser(event)" onclick="saveData()">
+      <label for="fname">First_Name:</label>
+      <input type="text" id="fname" required pattern="[a-zA-Z]+" title="Only letters are allowed">
+
+      <label for="mname">Middle_Name:</label>
+      <input type="text" id="mname"  pattern="[a-zA-Z]+" title="Only letters are allowed">
+
+      <label for="lname">Last_Name:</label>
+      <input type="text" id="lname" required pattern="[a-zA-Z]+" title="Only letters are allowed">
+
+      <label>Gender:</label>
+      <label><input type="radio" name="gender" value="male"> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </br>
+      <label for="mno">Mobile_No:</label>
+      <input type="tel" id="mno" required pattern="[0-9]{10}" title="Must be a 10-digit number" maxlength="10">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required required pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/">
+
+      <label for="category">Category:</label>
+      <select id="category" onchange="showSubcategory()">
+        <option value="job">Job</option>
+        <option value="student">Student</option>
+        <option value="other">Other</option>
+      </select>
+
+      <div id="subcategoryContainer" style="display: none;">
+        <label for="subcategory">Subcategory:</label>
+        <select id="subcategory"></select>
+      </div>
+
+      <button type="submit" id="submitButton">Add User</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
